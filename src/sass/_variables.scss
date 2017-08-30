@@ -1,0 +1,17 @@
+$color-background: white;
+$color-shadow: rgba(black, 0.6);
+$color-text-dark: #333;
+$color-text-light: white;
+$color-text-grey: #ccc;
+
+$color-theme-primary: #183c72; // HydroDynamics logo average dark blue
+$color-theme-secondary: #e7aa30; // HydroDynamics logo average faucet yellow
+
+$color-mission-border: #efefef;
+$color-mission-active: darken($color-theme-primary, 5%);
+$color-penalties: #cc2229;
+
+$overlay-width: 650px;
+
+$transition-overlay-open: 0.2s;
+$transition-mission-pointer: 0.2s;

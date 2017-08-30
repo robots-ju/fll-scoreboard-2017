@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    color: $color-text-dark;
+    font-family: Arial, sans-serif;
+    background: $color-background;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: 1em;
+}
