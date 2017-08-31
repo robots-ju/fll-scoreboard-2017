@@ -816,7 +816,7 @@
                             },
                             "handle": "m16_big_water_in_target",
                             "type": "number",
-                            "max": 4,
+                            "max": 6,
                             "points": 10,
                             "images": [
                                 "m16_end2.jpg"
