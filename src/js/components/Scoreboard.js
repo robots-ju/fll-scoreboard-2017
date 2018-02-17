@@ -8,12 +8,11 @@ import FllScorer from 'robots-ju-fll-robotgame-scorer-2017';
 import lang from '../helpers/lang';
 
 export default {
-    oninit(vnode)
-    {
+    oninit(vnode) {
         vnode.state.missions = JSON.parse(JSON.stringify(FllScorer.initialMissionsState));
 
         if (vnode.attrs && vnode.attrs.initialMissionsState) {
-            for(let attr in vnode.attrs.initialMissionsState) {
+            for (let attr in vnode.attrs.initialMissionsState) {
                 if (vnode.attrs.initialMissionsState.hasOwnProperty(attr) && vnode.state.missions.hasOwnProperty(attr)) {
                     vnode.state.missions[attr] = vnode.attrs.initialMissionsState[attr];
                 }
@@ -50,8 +49,7 @@ export default {
             vnode.state.focused_mission = newIndex;
         };
     },
-    view(vnode)
-    {
+    view(vnode) {
         const output = FllScorer.computeMissions(vnode.state.missions);
         const score = output.score;
 

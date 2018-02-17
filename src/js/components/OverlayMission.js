@@ -3,23 +3,20 @@ import trans from '../helpers/trans';
 import OverlayTask from './OverlayTask';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         const mission = vnode.attrs.mission;
         const missions = vnode.attrs.missions;
 
-        const missionClass = () => {
-            if (vnode.attrs.key === vnode.attrs.focused_mission) {
-                return '';
-            } else if(vnode.attrs.key > vnode.attrs.focused_mission) {
-                return '--hidden-next';
-            }
+        let className = '--hidden-previous';
 
-            return '--hidden-previous';
-        };
+        if (vnode.attrs.key === vnode.attrs.focused_mission) {
+            className = '';
+        } else if (vnode.attrs.key > vnode.attrs.focused_mission) {
+            className = '--hidden-next';
+        }
 
         return m('.scoreboard__overlay__mission', {
-            className: missionClass(),
+            className,
         }, m('.content', [
             m('h1', (mission.number === null ? '' : ('M' + mission.number + ' ')) + trans(mission.title)),
             m('p', trans(mission.description)),

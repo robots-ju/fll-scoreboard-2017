@@ -4,8 +4,7 @@ import icon from '../helpers/icon';
 import trans from '../helpers/trans';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         const task = vnode.attrs.task;
         const option = vnode.attrs.option;
         const missions = vnode.attrs.missions;
@@ -17,7 +16,7 @@ export default {
                     // We need to edit all the other options of that task,
                     // switch the state of this option and disable all the others
                     task.options.forEach(check_option => {
-                        if(check_option.handle == option.handle) {
+                        if (check_option.handle == option.handle) {
                             missions[check_option.handle] = !missions[option.handle];
                         } else {
                             missions[check_option.handle] = false;

@@ -1,48 +1,48 @@
 {
-	"locales": {
-		"en": "English",
-		"fr": "Français"
-	},
-	"strings": {
-		"prev": {
-			"en": "Previous",
-			"fr": "Précédent"
-		},
-		"next": {
-			"en": "Next",
-			"fr": "Suivant"
-		},
-		"close": {
-			"en": "Close",
-			"fr": "Fermer"
-		},
-		"launch_wizard": {
-			"en": "Launch wizard",
-			"fr": "Lancer l'assistant"
-		},
-		"about": {
-			"en": "This is the Robots-JU Scoreboard, an unofficial scoreboard for the FLL #HYDRODYNAMICS Robot-Game challenge",
-			"fr": "Tu es sur le Scoreboard Robots-JU, un scoreboard non officiel pour la compétition FLL Robot-Game #HYDRODYNAMICS"
-		},
-		"twitter": {
-			"text": {
-				"en": "My team scores %score% points at the #HYDRODYNAMICS #FLL #RobotGame. Check yours on the @RobotsJU #Scoreboard",
-				"fr": "Mon équipe marque %score% points au #FLL #RobotGame #HYDRODYNAMICS. Calcule le tien avec le #Scoreboard @RobotsJU"
-			},
-			"button": {
-				"en": "Share your score",
-				"fr": "Partage ton score"
-			},
-			"follow": {
-				"en": "Follow %user%",
-				"fr": "Suivre %user%"
-			}
-		},
-		"reset": {
-			"en": "Reset score",
-			"fr": "Remettre à zéro"
-		}
-	},
+    "locales": {
+        "en": "English",
+        "fr": "Français"
+    },
+    "strings": {
+        "prev": {
+            "en": "Previous",
+            "fr": "Précédent"
+        },
+        "next": {
+            "en": "Next",
+            "fr": "Suivant"
+        },
+        "close": {
+            "en": "Close",
+            "fr": "Fermer"
+        },
+        "launch_wizard": {
+            "en": "Launch wizard",
+            "fr": "Lancer l'assistant"
+        },
+        "about": {
+            "en": "This is the Robots-JU Scoreboard, an unofficial scoreboard for the FLL #HYDRODYNAMICS Robot-Game challenge",
+            "fr": "Tu es sur le Scoreboard Robots-JU, un scoreboard non officiel pour la compétition FLL Robot-Game #HYDRODYNAMICS"
+        },
+        "twitter": {
+            "text": {
+                "en": "My team scores %score% points at the #HYDRODYNAMICS #FLL #RobotGame. Check yours on the @RobotsJU #Scoreboard",
+                "fr": "Mon équipe marque %score% points au #FLL #RobotGame #HYDRODYNAMICS. Calcule le tien avec le #Scoreboard @RobotsJU"
+            },
+            "button": {
+                "en": "Share your score",
+                "fr": "Partage ton score"
+            },
+            "follow": {
+                "en": "Follow %user%",
+                "fr": "Suivre %user%"
+            }
+        },
+        "reset": {
+            "en": "Reset score",
+            "fr": "Remettre à zéro"
+        }
+    },
     "warnings": {
         "unknown": {
             "en": "The calculator returned an unknown warning: %warning%",
@@ -69,46 +69,46 @@
             "fr": "Vous ne remplissez pas les conditions du bonus pour M17"
         }
     },
-	"missions": [
-		{
-			"number": 1,
-			"title": {
-				"en": "Pipe removal",
-				"fr": "Retrait de canalisation"
-			},
-			"description": {
-				"en": "Move the broken pipe so it is completely in base",
-				"fr": "Déplacez le tuyau cassé afin qu’il soit complètement dans la Base"
-			},
-			"position": {
+    "missions": [
+        {
+            "number": 1,
+            "title": {
+                "en": "Pipe removal",
+                "fr": "Retrait de canalisation"
+            },
+            "description": {
+                "en": "Move the broken pipe so it is completely in base",
+                "fr": "Déplacez le tuyau cassé afin qu’il soit complètement dans la Base"
+            },
+            "position": {
                 "top": 48,
                 "left": 12
-			},
-			"tasks": [
-				{
-					"options": [
-						{
-							"title": {
-								"en": "The broken pipe is completely in base",
-								"fr": "Le tuyau cassé est complètement dans la Base"
-							},
-							"handle": "m01_broken_pipe_in_base",
-							"type": "boolean",
-							"points": 20,
-							"images": [
-								"m01.jpg"
-							]
-						}
-					]
-				}
-			],
-			"constraints": [
-				{
-					"en": "Visible at the end of the match",
-					"fr": "Visible à la fin du match"
-				}
-			]
-		},
+            },
+            "tasks": [
+                {
+                    "options": [
+                        {
+                            "title": {
+                                "en": "The broken pipe is completely in base",
+                                "fr": "Le tuyau cassé est complètement dans la Base"
+                            },
+                            "handle": "m01_broken_pipe_in_base",
+                            "type": "boolean",
+                            "points": 20,
+                            "images": [
+                                "m01.jpg"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "en": "Visible at the end of the match",
+                    "fr": "Visible à la fin du match"
+                }
+            ]
+        },
         {
             "number": 2,
             "title": {
@@ -964,45 +964,45 @@
                 }
             ]
         },
-		{
-			"number": null,
-			"title": {
-				"en": "Penalties",
-				"fr": "Pénalités"
-			},
-			"description": {
-				"en": "In the event of application of rule R14, the referee places one of the removed samples in the white triangle, in the southeast, as a permanent/untouchable interruption penalty. You can get up to 6 such penalties",
-				"fr": "Dans le cas où la règle R14 (Interruption) s’applique, l’arbitre place l’un des disques dans le triangle blanc, en tant que pénalité permanente et intouchable. Vous pouvez avoir jusqu’à 6 pénalités"
-			},
-			"position": {
-				"top": 83,
-				"left": 71
-			},
-			"tasks": [
-				{
-					"options": [
-						{
-							"title": {
-								"en": "Penalty points",
-								"fr": "Points de pénalité"
-							},
-							"handle": "penalties",
-							"type": "number",
-							"max": 6,
-							"points": -5,
-							"images": [
-								"penalties.jpg"
-							]
-						}
-					]
-				}
-			],
-			"constraints": [
-				{
-					"en": "After the match the referee keeps the not given penalties. They aren’t part of the game anymore",
-					"fr": "A la fin du match l’arbitre garde les pénalités non données. Elles ne font plus partie du jeu"
-				}
-			]
-		}
-	]
+        {
+            "number": null,
+            "title": {
+                "en": "Penalties",
+                "fr": "Pénalités"
+            },
+            "description": {
+                "en": "In the event of application of rule R14, the referee places one of the removed samples in the white triangle, in the southeast, as a permanent/untouchable interruption penalty. You can get up to 6 such penalties",
+                "fr": "Dans le cas où la règle R14 (Interruption) s’applique, l’arbitre place l’un des disques dans le triangle blanc, en tant que pénalité permanente et intouchable. Vous pouvez avoir jusqu’à 6 pénalités"
+            },
+            "position": {
+                "top": 83,
+                "left": 71
+            },
+            "tasks": [
+                {
+                    "options": [
+                        {
+                            "title": {
+                                "en": "Penalty points",
+                                "fr": "Points de pénalité"
+                            },
+                            "handle": "penalties",
+                            "type": "number",
+                            "max": 6,
+                            "points": -5,
+                            "images": [
+                                "penalties.jpg"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "constraints": [
+                {
+                    "en": "After the match the referee keeps the not given penalties. They aren’t part of the game anymore",
+                    "fr": "A la fin du match l’arbitre garde les pénalités non données. Elles ne font plus partie du jeu"
+                }
+            ]
+        }
+    ]
 }

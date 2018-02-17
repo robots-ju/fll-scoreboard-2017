@@ -2,8 +2,7 @@ import m from 'mithril';
 import trans from '../helpers/trans';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         // Current mission description from missions.json
         const mission = vnode.attrs.mission;
 
@@ -41,7 +40,7 @@ export default {
             },
             style: {
                 top: mission.position.top + '%',
-                left: mission.position.left + '%'
+                left: mission.position.left + '%',
             },
         }, [
             m('.pointer', {
@@ -52,5 +51,5 @@ export default {
             ]),
             m('.label', trans(mission.title)),
         ]);
-    }
+    },
 }

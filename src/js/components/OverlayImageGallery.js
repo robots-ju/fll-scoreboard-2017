@@ -1,8 +1,7 @@
 import m from 'mithril';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         return m('.images', vnode.attrs.images.map(
             (image, key) => m('.image', {
                 key,

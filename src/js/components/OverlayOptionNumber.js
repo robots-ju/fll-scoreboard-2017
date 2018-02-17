@@ -3,8 +3,7 @@ import OverlayImageGallery from './OverlayImageGallery';
 import trans from '../helpers/trans';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         const option = vnode.attrs.option;
         const missions = vnode.attrs.missions;
 

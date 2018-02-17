@@ -3,8 +3,7 @@ import OverlayOptionBoolean from './OverlayOptionBoolean';
 import OverlayOptionNumber from './OverlayOptionNumber';
 
 export default {
-    view(vnode)
-    {
+    view(vnode) {
         const task = vnode.attrs.task;
         const missions = vnode.attrs.missions;
 
