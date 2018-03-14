@@ -1,4 +1,5 @@
 import m from 'mithril';
+import Configuration from '../utils/Configuration';
 
 export default {
     view(vnode) {
@@ -6,7 +7,7 @@ export default {
             (image, key) => m('.image', {
                 key,
                 style: {
-                    backgroundImage: 'url(assets/' + image + ')',
+                    backgroundImage: 'url(' + Configuration.imagePath + image + ')',
                 },
             })
         ));

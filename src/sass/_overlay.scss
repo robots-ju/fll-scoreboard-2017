@@ -4,15 +4,15 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: $overlay-width;
+    width: $scoreboard-overlay-width;
     max-width: 100%;
-    background: $color-background;
+    background: $scoreboard-color-background;
     transition-property: top;
     transition-duration: 0.5s;
-    box-shadow: 0 0 2px $color-shadow;
+    box-shadow: 0 0 2px $scoreboard-color-shadow;
     overflow: hidden;
-    transform: translateX($overlay-width);
-    transition: $transition-overlay-open transform;
+    transform: translateX($scoreboard-overlay-width);
+    transition: $scoreboard-transition-overlay-open transform;
 
     &.--open {
         transform: translateX(0);
@@ -28,7 +28,7 @@
     width: 100%;
     overflow: auto;
     transform: translateX(0);
-    transition: $transition-overlay-open transform;
+    transition: $scoreboard-transition-overlay-open transform;
 
     &.--hidden-previous {
         transform: translateX(-100%);
@@ -43,7 +43,7 @@
         max-width: 100%;
         margin: 50px auto 0;
         padding: 20px 50px;
-        background: $color-background;
+        background: $scoreboard-color-background;
 
         @media (max-width: 1200px) {
             margin-top: 100px;
@@ -82,7 +82,7 @@
             }
 
             .field-box {
-                border: 2px solid $color-mission-border;
+                border: 2px solid $scoreboard-color-mission-border;
 
                 .images {
                     margin: 5px;
@@ -99,7 +99,7 @@
 
                     .points {
                         font-weight: bold;
-                        color: $color-text-grey;
+                        color: $scoreboard-color-text-grey;
                         font-size: 1.2em;
                         margin-left: 20px;
                     }
@@ -112,7 +112,7 @@
                     width: $checkbox-size;
                     height: $checkbox-size;
                     border-radius: 3px;
-                    background: $color-mission-border;
+                    background: $scoreboard-color-mission-border;
                     margin-right: 20px;
                     text-align: center;
                     font-size: 25px;
@@ -121,10 +121,10 @@
                 }
 
                 &.active {
-                    border-color: $color-mission-active;
+                    border-color: $scoreboard-color-mission-active;
 
                     .fake-checkbox, .points {
-                        color: $color-mission-active;
+                        color: $scoreboard-color-mission-active;
                     }
                 }
 
@@ -134,7 +134,7 @@
 
                     .number {
                         flex-grow: 1;
-                        border: 2px solid $color-mission-border;
+                        border: 2px solid $scoreboard-color-mission-border;
                         padding: 20px 10px;
                         border-bottom: none;
                         text-align: center;
@@ -149,15 +149,15 @@
 
                         .points {
                             font-weight: bold;
-                            color: $color-text-grey;
+                            color: $scoreboard-color-text-grey;
                             font-size: 1.2em;
                         }
 
                         &.active {
-                            border-color: $color-mission-active;
+                            border-color: $scoreboard-color-mission-active;
 
                             .points {
-                                color: $color-mission-active;
+                                color: $scoreboard-color-mission-active;
                             }
                         }
                     }

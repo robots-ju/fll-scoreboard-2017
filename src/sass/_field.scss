@@ -1,7 +1,7 @@
 .scoreboard__field {
     margin-top: 50px;
     position: relative;
-    background-image: url(hydro-dynamics-field.jpg);
+    background-image: url('#{$scoreboard-image-path}hydro-dynamics-field.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -71,11 +71,11 @@
         top: $pointer-normal-size/-2;
         left: $pointer-normal-size/-2;
         line-height: $pointer-normal-size;
-        background: $color-theme-secondary;
-        color: $color-text-light;
+        background: $scoreboard-color-theme-secondary;
+        color: $scoreboard-color-text-light;
 
         &, .score, .number {
-            transition: $transition-mission-pointer all;
+            transition: $scoreboard-transition-mission-pointer all;
         }
 
         .score {
@@ -92,7 +92,7 @@
             height: $pointer-scoring-size;
             top: $pointer-scoring-size/-2;
             left: $pointer-scoring-size/-2;
-            background: $color-theme-primary;
+            background: $scoreboard-color-theme-primary;
             line-height: 50px;
 
             .score {
@@ -108,7 +108,7 @@
         }
 
         &.negative {
-            background: $color-penalties;
+            background: $scoreboard-color-penalties;
         }
     }
 
@@ -117,11 +117,11 @@
         display: none;
         z-index: 10;
         right: 0;
-        background: $color-background;
+        background: $scoreboard-color-background;
         padding: 5px 20px;
         padding-right: 40px;
         border-radius: 2px;
-        box-shadow: 0 0 2px $color-shadow;
+        box-shadow: 0 0 2px $scoreboard-color-shadow;
         top: -1em;
     }
 

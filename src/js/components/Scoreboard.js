@@ -1,11 +1,12 @@
 import m from 'mithril';
 import icon from '../helpers/icon';
 import trans from '../helpers/trans';
-import data from '../helpers/data';
+import data from '../utils/data';
 import FieldMission from './FieldMission';
 import OverlayMission from './OverlayMission';
 import FllScorer from 'robots-ju-fll-robotgame-scorer-2017';
 import lang from '../helpers/lang';
+import Configuration from '../utils/Configuration';
 
 export default {
     oninit(vnode) {
@@ -21,7 +22,7 @@ export default {
 
         // The index of the mission to display in extended format
         // If the viewport is large enough we open the first mission in the wizard
-        vnode.state.focused_mission = window.innerWidth < 1000 ? -1 : 0;
+        vnode.state.focused_mission = window.innerWidth > Configuration.openOverlayWhenInnerWidthGreatherThan ? 0 : -1;
 
         vnode.state.focusMission = mission => {
             let newIndex = vnode.state.focused_mission;
@@ -136,7 +137,7 @@ export default {
                     }, locale)
                 )),
                 m('img', {
-                    src: './assets/hydro-dynamics-logo.png',
+                    src: Configuration.imagePath + 'hydro-dynamics-logo.png',
                     alt: 'FLL Hydro Dynamics Logo',
                 }),
                 m('p', trans(data.strings.about)),

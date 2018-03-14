@@ -4,7 +4,7 @@
     left: 10px;
     width: 300px;
     max-width: 100%;
-    border-left: 2px solid $color-text-grey;
+    border-left: 2px solid $scoreboard-color-text-grey;
     padding: 20px;
 
     &::before {
@@ -15,8 +15,8 @@
         bottom: 20px;
         left: -20px;
         right: 30px;
-        background: rgba($color-background, 0.9);
-        box-shadow: 0 0 50px 50px rgba($color-background, 0.9);
+        background: rgba($scoreboard-color-background, 0.9);
+        box-shadow: 0 0 50px 50px rgba($scoreboard-color-background, 0.9);
     }
 
     @media (max-width: 1400px) {
@@ -57,11 +57,11 @@
         text-decoration: none;
         padding: 6px 10px;
         border: none;
-        box-shadow: 0 0 2px $color-shadow;
+        box-shadow: 0 0 2px $scoreboard-color-shadow;
         cursor: pointer;
 
         background: #efefef;
-        color: $color-text-dark;
+        color: $scoreboard-color-text-dark;
 
         &:hover {
             background: #e1e1e1;

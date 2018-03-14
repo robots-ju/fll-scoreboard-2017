@@ -4,8 +4,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background: $color-background;
-    box-shadow: 0 0 2px $color-shadow;
+    background: $scoreboard-color-background;
+    box-shadow: 0 0 2px $scoreboard-color-shadow;
     font-weight: bold;
     flex-wrap: wrap;
 
@@ -50,10 +50,10 @@
     .overlay-nav {
         width: 0;
         overflow: hidden;
-        transition: $transition-overlay-open width;
+        transition: $scoreboard-transition-overlay-open width;
 
         &.active {
-            width: $overlay-width;
+            width: $scoreboard-overlay-width;
         }
 
         button {
@@ -73,8 +73,8 @@
         border: none;
         font-weight: inherit;
         cursor: pointer;
-        background: $color-theme-primary;
-        color: $color-text-light;
+        background: $scoreboard-color-theme-primary;
+        color: $scoreboard-color-text-light;
         font-size: 1.2em;
 
         &.header-block {
@@ -82,13 +82,13 @@
         }
 
         &:hover {
-            background: darken($color-theme-primary, 5%);
+            background: darken($scoreboard-color-theme-primary, 5%);
         }
     }
 
     .score {
-        background: $color-theme-primary;
-        color: $color-text-light;
+        background: $scoreboard-color-theme-primary;
+        color: $scoreboard-color-text-light;
         font-size: 2em;
         padding: 0 50px;
         text-align: center;

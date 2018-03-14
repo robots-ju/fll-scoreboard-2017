@@ -11,7 +11,7 @@ export default {
 
         for (let number = 0; number <= option.max; number++) {
             inputs.push(m('.number', {
-                className: missions[option.handle] == number ? ' active' : '',
+                className: missions[option.handle] === number ? ' active' : '',
                 onclick() {
                     missions[option.handle] = number;
                 },
