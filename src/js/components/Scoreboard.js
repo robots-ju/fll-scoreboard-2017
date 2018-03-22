@@ -10,16 +10,6 @@ import Configuration from '../utils/Configuration';
 
 export default {
     oninit(vnode) {
-        vnode.state.missions = JSON.parse(JSON.stringify(FllScorer.initialMissionsState));
-
-        if (vnode.attrs && vnode.attrs.initialMissionsState) {
-            for (let attr in vnode.attrs.initialMissionsState) {
-                if (vnode.attrs.initialMissionsState.hasOwnProperty(attr) && vnode.state.missions.hasOwnProperty(attr)) {
-                    vnode.state.missions[attr] = vnode.attrs.initialMissionsState[attr];
-                }
-            }
-        }
-
         // The index of the mission to display in extended format
         // If the viewport is large enough we open the first mission in the wizard
         vnode.state.focused_mission = window.innerWidth > Configuration.openOverlayWhenInnerWidthGreatherThan ? 0 : -1;
@@ -51,7 +41,8 @@ export default {
         };
     },
     view(vnode) {
-        const output = FllScorer.computeMissions(vnode.state.missions);
+        const missions = vnode.attrs.missions;
+        const output = FllScorer.computeMissions(missions);
         const score = output.score;
 
         return [
@@ -113,7 +104,7 @@ export default {
                 (mission, key) => m(FieldMission, {
                     mission,
                     key,
-                    missions: vnode.state.missions,
+                    missions,
                     focusMission: vnode.state.focusMission,
                 })
             )),
@@ -123,7 +114,7 @@ export default {
                 (mission, key) => m(OverlayMission, {
                     mission,
                     key,
-                    missions: vnode.state.missions,
+                    missions,
                     focused_mission: vnode.state.focused_mission,
                 })
             )),
@@ -165,7 +156,9 @@ export default {
                 ])),
                 m('button.btn', {
                     onclick() {
-                        vnode.state.missions = JSON.parse(JSON.stringify(FllScorer.initialMissionsState));
+                        Object.keys(FllScorer.initialMissionsState).forEach(key => {
+                            missions[key] = FllScorer.initialMissionsState[key];
+                        });
                     },
                 }, trans(data.strings.reset)),
             ]),

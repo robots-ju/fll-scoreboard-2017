@@ -1,6 +1,6 @@
 import m from 'mithril';
-import Scoreboard from './components/Scoreboard';
+import StandaloneScoreboard from './components/StandaloneScoreboard';
 
 const root = document.getElementById('js-scoreboard');
 
-m.mount(root, Scoreboard);
+m.mount(root, StandaloneScoreboard);
