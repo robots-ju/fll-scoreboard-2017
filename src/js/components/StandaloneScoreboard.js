@@ -6,11 +6,18 @@ export default {
     oninit(vnode) {
         vnode.state.missions = JSON.parse(JSON.stringify(FllScorer.initialMissionsState));
 
-        if (vnode.attrs && vnode.attrs.initialMissionsState) {
-            for (let attr in vnode.attrs.initialMissionsState) {
-                if (vnode.attrs.initialMissionsState.hasOwnProperty(attr) && vnode.state.missions.hasOwnProperty(attr)) {
-                    vnode.state.missions[attr] = vnode.attrs.initialMissionsState[attr];
+
+        if (window.location.hash) {
+            try {
+                const initialMissionsState = JSON.parse(decodeURIComponent(window.location.hash.substring(1)));
+
+                for (let attr in initialMissionsState) {
+                    if (initialMissionsState.hasOwnProperty(attr) && vnode.state.missions.hasOwnProperty(attr)) {
+                        vnode.state.missions[attr] = initialMissionsState[attr];
+                    }
                 }
+            } catch (e) {
+                console.warn(e);
             }
         }
     },
