@@ -14,3 +14,4 @@ mix.sass(src_path + 'sass/app.scss', dest_path_assets);
 mix.copy(src_path + 'img', dest_path_assets);
 mix.copy('node_modules/font-awesome/fonts', dest_path_assets);
 mix.copy(src_path + 'html', dest_path);
+mix.version();
