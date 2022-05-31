@@ -1,5 +1,7 @@
 # Robots-JU FLL 2017 Scoreboard
 
+> This project is archived because it was merged into https://github.com/robots-ju/fll-scoreboard
+
 Unofficial web scoreboard for the FLL 2017 (Hydro Dynamics) Robot Game.
 
 This is a private project that is not supported or approved by the FIRST® LEGO® League.
